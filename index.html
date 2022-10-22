@@ -404,6 +404,7 @@ position: absolute;
 width:98%;
 height:80%;
 top:5px;
+background:linear-gradient(45deg,white,gray);
 z-index:;
 overflow: hidden;
 }
@@ -477,12 +478,13 @@ font-size:15px;
 <div class="picpa">
  <div id="displai">  
  <div class="deli" onclick="deli()">x</div>
+  <img id="displaii" style="width:100%;">
  </div>
  <div class="bottompicpa">
    <div class="img" >1</div>
-   <div class="img"><img src="https://mimo.app/i/hacker.png" onclick="myfunction(this)">2</div>
-   <div class="img"><img src="https://mimo.app/i/cars.png" onclick="myfunction(this)">3</div>
-   <div class="img"><img src="https://mimo.app/i/dog.png" onclick="myfunction(this)">4</div>
+   <div class="img"><img src="https://mimo.app/i/hacker.png" onclick="myfunction(this)"></div>
+   <div class="img"><img src="https://mimo.app/i/car.png" onclick="myfunction(this)"></div>
+   <div class="img"><img src="https://mimo.app/i/dog.png" onclick="myfunction(this)"></div>
   </div>
  </div>
 
@@ -828,13 +830,19 @@ messo.addEventListener("click",()=>{
 });
 const picpa=document.querySelector(".picpa");
 const displai=document.querySelector("#displai");
+const displaii=document.querySelector(".dispaii");
 const img=picpa.getElementsByClassName("img");
-for(let i=0;i<img.length;i++){
+/*for(let i=0;i<img.length;i++){
    img[i].addEventListener("click",(e)=>{
-   displai.src=e.target.src;
-     
+    img[i].src=displaii.src;
+    
    });
- }
+ }*/
+function myfunction(img){
+ 
+ img.src=displaii.src;
+ displaii.ParentNode.style.display="block";
+}
 function deli(){
   
   picpa.classList.toggle("blo");
