@@ -830,16 +830,12 @@ messo.addEventListener("click",()=>{
 const picpa=document.querySelector(".picpa");
 const displai=document.querySelector("#displai");
 const img=picpa.getElementsByClassName("img");
-/*for(let i=0;i<img.length;i++){
+for(let i=0;i<img.length;i++){
    img[i].addEventListener("click",(e)=>{
-    img[i].innerHTML=displai.innerHTML;
-     alert(displai.innerHTML);
+   display.src=e.target.src;
+     
    });
- }*/
-function myfunction(img){
- displai.src=img.src;
- displai.ParentNode.style.display="block";
-}
+ }
 function deli(){
   
   picpa.classList.toggle("blo");
