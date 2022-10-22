@@ -19,10 +19,9 @@ box-sizing:border-box;
 body{
 position: relative;
 display:flex;
-
 flex-direction:column;
 align-items: center;
-height:auto;
+height:300vh;
 background:linear-gradient(90deg,lightblue,#1a1515);
 }
  #inp{
@@ -51,7 +50,7 @@ overflow: hidden;
 top:0;
 display:flex;
 justify-content: center;
-z-index:2;
+z-index:21;
 box-shadow:3px 3px 3px 3px gray;
 }
 .header h3{
@@ -374,10 +373,10 @@ background:black;
 }
 }
 .picpa{
-position: absolute;
+position:fixed;
 margin-top:0px;
-z-index:10;
-height:85vh;
+z-index:4;
+height:85%;
 width:100%;
 background:blue;
 display:flex;
@@ -400,16 +399,16 @@ display:flex;
 align-items: center;
 float:right;
 }
-#display {
+#displai {
 position: absolute;
 width:98%;
 height:80%;
-top:3px;
-background:;
-z-index:30;
-
+top:5px;
+background:linear-gradient(45deg,white,gray);
+z-index:;
+overflow: hidden;
 }
-#display .deli{
+#displai .deli{
 position: absolute;
 right:10px;
 top:10px;
@@ -464,10 +463,8 @@ font-size:15px;
 <div class="header">
   <h3>KyU ATHLETICS</h3> 
 <input placeholder="Search Athlete...eg.kinuthia" id="inp" onkeyup="jump()">
-<button class="sendbtn" type="text" ">search</button>
-
+<button class="sendbtn" type="text">search</button>
 </div>
-
 
 <div id="paret">
 <h3>EMBU</h3>
@@ -479,20 +476,21 @@ font-size:15px;
  </div>
 </div>
 <div class="picpa">
- <div id="display">  
+ <div id="displai">  
  <div class="deli" onclick="deli()">x</div>
  </div>
  <div class="bottompicpa">
    <div class="img" >1</div>
-   <div class="img" ><img src="https://mimo.app/i/hacker.png"></div>
-   <div class="img" onclick="functio(this)">3</div>
-   <div class="img" onclick="functio(this)">4</div>
+   <div class="img"><img src="https://mimo.app/i/hacker.png" onclick="myfunction(this)">2</div>
+   <div class="img"><img src="https://mimo.app/i/cars.png" onclick="myfunction(this)">3</div>
+   <div class="img"><img src="https://mimo.app/i/dog.png" onclick="myfunction(this)">4</div>
   </div>
  </div>
+
 <div class="navbar">
    
    <div class="tt">
-  <div class="gall" onclick="gall()" ><i class="fa fa-bars"></i></div>
+  <div class="gall" onclick="gall()">@</div>
   </div>
    <div class="del"><i class="fa fa-close">x</i></div>
     <h4>CALENDAR OF EVENTS</h4>
@@ -830,17 +828,17 @@ messo.addEventListener("click",()=>{
 
 });
 const picpa=document.querySelector(".picpa");
-const display=document.querySelector("#display");
-const bottompic=document.querySelector(".bottompicpa");
-const img=bottompic.getElementsByClassName("img");
+const displai=document.querySelector("#displai");
+const img=picpa.getElementsByClassName("img");
 /*for(let i=0;i<img.length;i++){
    img[i].addEventListener("click",(e)=>{
-     e.target.src=display.src;
+    img[i].innerHTML=displai.innerHTML;
+     alert(displai.innerHTML);
    });
  }*/
-function functio(img){
- img.src=display.src;
- display.ParentNode.style.display="block";
+function myfunction(img){
+ img.src=displai.src;
+ displai.ParentNode.style.display="block";
 }
 function deli(){
   
