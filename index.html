@@ -404,7 +404,7 @@ position: absolute;
 width:98%;
 height:80%;
 top:5px;
-background:linear-gradient(45deg,white,gray);
+background:gray;
 z-index:;
 overflow: hidden;
 }
@@ -478,7 +478,7 @@ font-size:15px;
 <div class="picpa">
  <div id="displai">  
  <div class="deli" onclick="deli()">x</div>
-  <img id="displaii" style="width:100%;">
+  <img id="displaii" style="width:100%; height:70%;">
  </div>
  <div class="bottompicpa">
    <div class="img" >1</div>
@@ -839,9 +839,8 @@ const img=picpa.getElementsByClassName("img");
    });
  }*/
 function myfunction(img){
- 
  img.src=displaii.src;
- displaii.ParentNode.style.display="block";
+
 }
 function deli(){
   
