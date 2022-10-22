@@ -830,13 +830,11 @@ messo.addEventListener("click",()=>{
 });
 const picpa=document.querySelector(".picpa");
 const displai=document.querySelector("#displai");
-const displaii=document.querySelector(".dispaii");
+
 const img=picpa.getElementsByClassName("img");
-for(let i=0;i<img.length;i++){
-   img[i].addEventListener("click",(e)=>{
-    img[i].src=displaii.src;
-    
-   });
+function myfunction(img){
+const displaii=document.querySelector(".dispaii");
+ displaii.src=img.src;
  }
 
 function deli(){
