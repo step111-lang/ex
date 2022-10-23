@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -415,13 +415,13 @@ top:10px;
 font-size:20px;
 color:orange;
 }
- .img{
+ .imgi{
 position: relative;
  width:100px;
  height:95%;
  background:white;
  margin:2px;
-
+ overflow: hidden;
 }
 .blo{
 transform:scale(1);
@@ -478,13 +478,13 @@ font-size:15px;
 <div class="picpa">
  <div id="displai">  
  <div class="deli" onclick="deli()">x</div>
-  <img id="displaii" style="width:100%;">
+  <img id="displaii" style="width:100%; height:100%;">
  </div>
  <div class="bottompicpa">
-   <div class="img" >1</div>
-   <div class="img"><img src="https://mimo.app/i/hacker.png" onclick="myfunction(this)"></div>
-   <div class="img"><img src="https://mimo.app/i/car.png" onclick="myfunction(this)"></div>
-   <div class="img"><img src="https://mimo.app/i/dog.png" onclick="myfunction(this)"></div>
+   <div class="imgi" >1</div>
+   <div class="imgi"><img src="https://mimo.app/i/hacker.png" onclick="myfunction(this)"></div>
+   <div class="imgi"><img src="https://mimo.app/i/car.png" onclick="myfunction(this)"></div>
+   <div class="imgi"><img src="https://mimo.app/i/dog.png" onclick="myfunction(this)"></div>
   </div>
  </div>
 
@@ -829,15 +829,17 @@ messo.addEventListener("click",()=>{
 
 });
 const picpa=document.querySelector(".picpa");
-const displai=document.getElementById("displai");
-const displaii=document.getElementById("dispaii");
-const img=picpa.getElementsByClassName("img");
+const displai=document.querySelector("#displai");
+const displaii=document.querySelector(".dispaii");
+const img=picpa.getElementsByClassName("imgi");
 for(let i=0;i<img.length;i++){
-   img[i].addEventListener("click",()=>{
+   img[i].addEventListener("click",(e)=>{
     img[i].src=displaii.src;
+    alert(img[i].innerHTML);
    });
  }/*
 function myfunction(imgs){
+ 
  imgs.src=displaii.src;
  displaii.ParentNode.style.display="block";
 }*/
