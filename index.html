@@ -829,15 +829,9 @@ messo.addEventListener("click",()=>{
 
 });
 const picpa=document.querySelector(".picpa");
-const displai=document.querySelector("#displai");
-const displaii=document.getElementById("dispaii");
-const img=picpa.getElementsByClassName("imgi");
-for(let i=0;i<img.length;i++){
-   img[i].addEventListener("click",(e)=>{
-    img[i].src=displaii.src;
-    
-   });
- 
+function myfunction(imgs){
+var displaii=document.getElementById("dispaii");
+ displaii.src=imgs.src
 }
 function deli(){
   
