@@ -407,6 +407,7 @@ top:5px;
 background:linear-gradient(45deg,white,gray);
 z-index:;
 overflow: hidden;
+
 }
 #displai .deli{
 position: absolute;
@@ -415,9 +416,11 @@ top:10px;
 font-size:20px;
 color:orange;
 }
-.bottompicpa .imgi{
+ .imgi{
+position: relative;
  width:100px;
  height:95%;
+ background:white;
  margin:2px;
  overflow: hidden;
 }
@@ -480,9 +483,9 @@ font-size:15px;
  </div>
  <div class="bottompicpa">
    <div class="imgi" >1</div>
-   <div class="imgi"><img src="https://mimo.app/i/hacker.png" onclick="myfunction(this)"></div>
-   <div class="imgi"><img src="https://mimo.app/i/car.png" onclick="myfunction(this)"></div>
-   <div class="imgi"><img src="https://mimo.app/i/dog.png" onclick="myfunction(this)"></div>
+   <div class="imgi"><img src="https://mimo.app/i/hacker.png" onclick="myfunction(this);"></div>
+   <div class="imgi"><img src="https://mimo.app/i/car.png" onclick="myfunction(this);"></div>
+   <div class="imgi"><img src="https://mimo.app/i/dog.png" onclick="myfunction(this);"></div>
   </div>
  </div>
 
@@ -827,9 +830,11 @@ messo.addEventListener("click",()=>{
 
 });
 const picpa=document.querySelector(".picpa");
+const displai=document.querySelector("#displai");
+
 function myfunction(imgs){
 var displaii=document.getElementById("dispaii");
- displaii.src=imgs.src
+imgs.src=displaii.src;
 }
 function deli(){
   
