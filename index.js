@@ -282,9 +282,7 @@ var dis=document.getElementById("dis");
 for(let i=0;i< imd.length;i++){
  imd[i].addEventListener("click",(e)=>{
  dis.src=e.target.src;
- if(e.target.src!=""){
-   dis.innerHTML="NO PIC FOUND";
-  }
+ 
 });
 }
 function deli(){
